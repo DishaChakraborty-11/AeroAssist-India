@@ -18,9 +18,9 @@ def handle_medical_emergency(patient_data):
     temperature = patient_data.get('temperature')
     location = patient_data.get('location', 'Unknown Location')
 
-    print(f"\n[Medical Emergency Handler for {patient_id}]")
-    print(f"\tLocation: {location}")
-    print(f"\tVitals: HR={heart_rate} bpm, SpO2={oxygen_saturation}%, BP={bp_systolic}/{bp_diastolic} mmHg, Temp={temperature}°C")
+    print(f"\\n[Medical Emergency Handler for {patient_id}]")
+    print(f"\\tLocation: {location}")
+    print(f"\\tVitals: HR={heart_rate} bpm, SpO2={oxygen_saturation}%, BP={bp_systolic}/{bp_diastolic} mmHg, Temp={temperature}°C")
 
     emergency_detected = False
     recommended_actions = []
@@ -80,14 +80,14 @@ def handle_medical_emergency(patient_data):
             recommended_actions.append("Hypothermia detected. Initiate passive rewarming.")
 
     if emergency_detected:
-        print("\t--- *** CRITICAL EMERGENCY DETECTED *** ---")
-        print("\tInitiating priority drone dispatch for essential medical supplies and equipment.")
-        print("\tImmediately alerting nearest emergency services and specialized medical personnel.")
+        print("\\t--- *** CRITICAL EMERGENCY DETECTED *** ---")
+        print("\\tInitiating priority drone dispatch for essential medical supplies and equipment.")
+        print("\\tImmediately alerting nearest emergency services and specialized medical personnel.")
         for action in recommended_actions:
-            print(f"\tAction: {action}")
+            print(f"\\tAction: {action}")
         return f"Emergency for {patient_id} critically handled. Drone en route to {location} with priority."
     else:
-        print("\tPatient vitals are within normal ranges. Continuous monitoring advised.")
+        print("\\tPatient vitals are within normal ranges. Continuous monitoring advised.")
         return f"No immediate critical emergency for {patient_id}. Monitoring ongoing."
 '''
 
@@ -101,6 +101,6 @@ with open(medical_response_file_path, 'w') as f:
 print(f"Created {medical_response_file_path} with the handle_medical_emergency function.")
 
 # Verify content
-print(f"\n--- Content of {medical_response_file_path} ---")
+print(f"\\n--- Content of {medical_response_file_path} ---")
 with open(medical_response_file_path, 'r') as f:
     print(f.read())
