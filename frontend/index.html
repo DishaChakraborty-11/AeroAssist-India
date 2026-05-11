@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="AeroAssist India emergency drone response dashboard for medical aid, search and rescue, and fleet readiness."
+    />
+    <title>AeroAssist India | Emergency Drone Response</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="brand" href="#home" aria-label="AeroAssist India home">
+          <span class="brand-mark">AA</span>
+          <span>AeroAssist India</span>
+        </a>
+        <div class="nav-links">
+          <a href="#missions">Missions</a>
+          <a href="#fleet">Fleet</a>
+          <a href="#dispatch">Dispatch</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="home">
+      <section class="hero section-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Robotics and drone response platform</p>
+          <h1>Rapid aerial support for medical emergencies and search missions.</h1>
+          <p class="hero-text">
+            A simple frontend dashboard for triaging patient vitals, tracking
+            search-and-rescue areas, and dispatching drones across India.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#dispatch">Create Dispatch</a>
+            <a class="button secondary" href="#missions">View Missions</a>
+          </div>
+        </div>
+        <aside class="status-card" aria-label="Live response summary">
+          <div class="pulse"></div>
+          <p>Live Operations</p>
+          <strong>12 min</strong>
+          <span>average launch time</span>
+          <div class="status-row">
+            <span>Active drones</span>
+            <strong id="activeDrones">08</strong>
+          </div>
+          <div class="status-row">
+            <span>Critical alerts</span>
+            <strong id="criticalAlerts">03</strong>
+          </div>
+        </aside>
+      </section>
+
+      <section class="metrics" aria-label="Operational metrics">
+        <article>
+          <span>Patients monitored</span>
+          <strong>128</strong>
+        </article>
+        <article>
+          <span>Rescue zones mapped</span>
+          <strong>34</strong>
+        </article>
+        <article>
+          <span>Supply drops</span>
+          <strong>76</strong>
+        </article>
+        <article>
+          <span>Fleet readiness</span>
+          <strong>91%</strong>
+        </article>
+      </section>
+
+      <section id="missions" class="section panel-section">
+        <div class="section-heading">
+          <p class="eyebrow">Mission command</p>
+          <h2>Emergency mission queue</h2>
+          <p>Filter active cases and review the recommended drone response.</p>
+        </div>
+        <div class="filter-bar" aria-label="Mission filters">
+          <button class="filter-button active" data-filter="all" type="button">All</button>
+          <button class="filter-button" data-filter="medical" type="button">Medical</button>
+          <button class="filter-button" data-filter="rescue" type="button">Rescue</button>
+          <button class="filter-button" data-filter="supply" type="button">Supply</button>
+        </div>
+        <div id="missionList" class="mission-list" aria-live="polite"></div>
+      </section>
+
+      <section id="fleet" class="section split-section">
+        <div>
+          <p class="eyebrow">Fleet health</p>
+          <h2>Drone readiness map</h2>
+          <p>
+            Regional teams can use this mock map to understand approximate drone
+            positioning, battery readiness, and high-priority corridors.
+          </p>
+          <div class="fleet-list">
+            <div><span class="dot green"></span> Medical payload ready</div>
+            <div><span class="dot amber"></span> Battery below 40%</div>
+            <div><span class="dot red"></span> Critical mission zone</div>
+          </div>
+        </div>
+        <div class="map-card" aria-label="Stylized map of India with drone pins">
+          <span class="map-pin pin-delhi">Delhi</span>
+          <span class="map-pin pin-mumbai">Mumbai</span>
+          <span class="map-pin pin-chennai">Chennai</span>
+          <span class="map-pin pin-guwahati">Guwahati</span>
+        </div>
+      </section>
+
+      <section id="dispatch" class="section dispatch-section">
+        <div class="section-heading">
+          <p class="eyebrow">New dispatch</p>
+          <h2>Request aerial assistance</h2>
+          <p>Submit a mock mission request to preview a dispatch summary.</p>
+        </div>
+        <form id="dispatchForm" class="dispatch-form">
+          <label>
+            Mission type
+            <select id="missionType" required>
+              <option value="Medical emergency">Medical emergency</option>
+              <option value="Search and rescue">Search and rescue</option>
+              <option value="Supply delivery">Supply delivery</option>
+            </select>
+          </label>
+          <label>
+            Location
+            <input id="location" type="text" placeholder="e.g. Pune, Maharashtra" required />
+          </label>
+          <label>
+            Priority
+            <select id="priority" required>
+              <option>Critical</option>
+              <option>High</option>
+              <option>Medium</option>
+            </select>
+          </label>
+          <label>
+            Payload
+            <input id="payload" type="text" placeholder="e.g. AED + oxygen kit" required />
+          </label>
+          <button class="button primary" type="submit">Generate Dispatch Plan</button>
+        </form>
+        <div id="dispatchResult" class="dispatch-result" role="status" aria-live="polite">
+          Complete the form to generate a drone dispatch plan.
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Built for AeroAssist India • Static frontend prototype</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
