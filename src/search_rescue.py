@@ -80,7 +80,7 @@ def perform_search_and_rescue(sar_scenario):
     print(f"\tStrategy: {drone_strategy}")
     print(f"\tPath Planning: {path_planning_details}")
     print(f"\tEstimated Search Speed Factor: {operational_speed_factor:.1f}x")
-    print(f"\tDetection Equipment: {', '.join(detection_equipment)}")
+    print(f"\tDetection Equipment: {", ".join(detection_equipment)}")
 
     # Calculate battery consumption
     total_battery_consumption_wh = (BASE_CONSUMPTION_RATE_WH_KM * estimated_distance_km) + \
