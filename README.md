@@ -45,19 +45,23 @@ Unlike generic student projects, AeroAssist India aims to solve a real-world ope
 
 ## 🏠 Homepage
 
-<img width="100%" alt="homepage" src="YOUR_SCREENSHOT_LINK_HERE">
+<img width="100%" alt="homepage" src="<img width="1899" height="910" alt="Screenshot (60)" src="https://github.com/user-attachments/assets/afad6862-7bbe-443e-926c-d0f36c1768d5" />
+">
 
 ---
 
 ## 🚨 Dispatch Dashboard
 
-<img width="100%" alt="dashboard" src="YOUR_SCREENSHOT_LINK_HERE">
+<img width="100%" alt="dashboard" src="<img width="1892" height="878" alt="Screenshot (61)" src="https://github.com/user-attachments/assets/3eba14b7-a208-4657-b189-6a2ff9a21ee8" /> <img width="1920" height="913" alt="Screenshot (62)" src="https://github.com/user-attachments/assets/430cc132-58f3-40b3-a1f1-535e5cfbf198" />
+
+">
 
 ---
 
 ## 📊 Emergency Monitoring Panel
 
-<img width="100%" alt="panel" src="YOUR_SCREENSHOT_LINK_HERE">
+<img width="100%" alt="panel" src="<img width="1920" height="894" alt="Screenshot (63)" src="https://github.com/user-attachments/assets/e366f0b5-fb60-4f23-a700-e7f5852bef34" />
+">
 
 ---
 
